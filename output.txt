@@ -1,0 +1,44 @@
+Task 1: Fix Login
+terminal output - 
+                 POST /auth/login
+                 OTP 381092 Session 0pm57k generated
+                 POST /auth/login -> 200 (4ms)
+
+
+Task 2: Fix OTP Verification
+termilal output - 
+                 POST /auth/verify-otp
+                 {
+                   email: 'poojapatel22200@gmail.com',
+                   password: 12345,
+                   createdAt: 1770910176370,
+                   expiresAt: 1770910296370
+                 }
+                 POST /auth/verify-otp -> 200 (3ms)
+
+
+Task 3: Fix Token Generation
+terminal output - 
+                 POST /auth/token
+                 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBvb2phcGF0ZWwyMjIwMEBnbWFpbC5jb20iLCJzZXNzaW9uSWQiOiIwcG01N2siLCJpYXQiOjE3NzA5MTAyNzUsImV4cCI6MTc3MDkxMTE3NX0.GS9a8A3BPxunfBXVjhdBIudyxgQfpKHTYWsoI83C-Bg      
+                 POST /auth/token -> 200 (10ms)
+
+
+Task 4: Fix Protected Route Access
+terminal output - 
+                 GET /protected
+                 GET /protected -> 200 (6ms)
+
+
+Final Response -
+                message: "Access granted",
+                user:{
+                  "email": "poojapatel22200@gmail.com",
+                  "sessionId": "0pm57k",
+                  "iat": 1770910275,
+                  "exp": 1770911175
+                },
+                success_flag: "FLAG-cG9vamFwYXRlbDIyMjAwQGdtYWlsLmNvbV9DT01QTEVURURfQVNTSUdOTUVOVA=="
+
+
+Success_flag: "FLAG-cG9vamFwYXRlbDIyMjAwQGdtYWlsLmNvbV9DT01QTEVURURfQVNTSUdOTUVOVA=="
